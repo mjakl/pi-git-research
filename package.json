@@ -1,21 +1,43 @@
 {
   "name": "pi-git-research",
-  "version": "0.1.0",
-  "description": "Pi extension for researching git repositories",
-  "keywords": [
-    "pi-package"
-  ],
-  "peerDependencies": {
-    "@mariozechner/pi-ai": "*",
-    "@mariozechner/pi-coding-agent": "*",
-    "@sinclair/typebox": "*"
-  },
+  "version": "1.0.0",
+  "description": "Tools for researching and exploring Git repositories with Pi agent",
+  "type": "module",
+  "main": "src/index.ts",
   "pi": {
     "extensions": [
-      "src/index.ts"
+      "./src/index.ts"
     ],
     "skills": [
-      "skills"
+      "./skills"
     ]
+  },
+  "keywords": [
+    "pi",
+    "git",
+    "research",
+    "clone",
+    "summary"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjakl/pi-git-research.git"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@mariozechner/pi-ai": ">=0.37.0",
+    "@mariozechner/pi-coding-agent": ">=0.37.0",
+    "@sinclair/typebox": ">=0.34.0"
+  },
+  "peerDependenciesMeta": {
+    "@mariozechner/pi-coding-agent": {
+      "optional": true
+    },
+    "@mariozechner/pi-ai": {
+      "optional": true
+    },
+    "@sinclair/typebox": {
+      "optional": true
+    }
   }
 }
