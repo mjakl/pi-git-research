@@ -1,8 +1,8 @@
-# Pi Git Research
+# Pi git Research
 
 **Tools for researching and exploring Git repositories with Pi agent. Clone, update, and summarize codebases on the fly.**
 
-## Why Pi Git Research
+## Why pi git Research
 
 **Codebase Exploration** — Quickly download and orient yourself in a new repository. Perfect for researching dependencies, libraries, or competitor codebases.
 
