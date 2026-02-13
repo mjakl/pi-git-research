@@ -1,0 +1,21 @@
+{
+  "name": "pi-git-research",
+  "version": "0.1.0",
+  "description": "Pi extension for researching git repositories",
+  "keywords": [
+    "pi-package"
+  ],
+  "peerDependencies": {
+    "@mariozechner/pi-ai": "*",
+    "@mariozechner/pi-coding-agent": "*",
+    "@sinclair/typebox": "*"
+  },
+  "pi": {
+    "extensions": [
+      "src/index.ts"
+    ],
+    "skills": [
+      "skills"
+    ]
+  }
+}
