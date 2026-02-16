@@ -12,19 +12,27 @@
 
 ## Install
 
-### Option 1: Install via Pi
+### Option 1: Install from npm (recommended)
+
+```bash
+pi install npm:@mjakl/pi-git-research
+```
+
+### Option 2: Install via git
 
 ```bash
 pi install git:github.com/mjakl/pi-git-research
 ```
 
-### Option 2: Manual Installation
+### Option 3: Manual Installation
 
 Clone this repository into your project-local or global Pi extensions directory:
 
 ```bash
 cd .pi/extensions # or ~/.pi/agent/extensions
 git clone https://github.com/mjakl/pi-git-research.git
+cd pi-git-research
+npm install
 ```
 
 ## Configuration
