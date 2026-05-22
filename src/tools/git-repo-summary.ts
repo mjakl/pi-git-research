@@ -1,5 +1,5 @@
-import type { ExtensionAPI, ToolDefinition } from "@mariozechner/pi-coding-agent";
-import { Type } from "@sinclair/typebox";
+import type { ExtensionAPI, ToolDefinition } from "@earendil-works/pi-coding-agent";
+import { Type } from "typebox";
 import * as path from "node:path";
 import * as fs from "node:fs/promises";
 

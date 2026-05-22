@@ -1,4 +1,4 @@
-import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
+import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { gitRepoTool } from "./tools/git-repo";
 import { gitRepoSummaryTool } from "./tools/git-repo-summary";
 import { gitRepoVersionsTool } from "./tools/git-repo-versions";

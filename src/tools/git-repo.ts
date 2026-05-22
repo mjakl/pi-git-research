@@ -1,6 +1,6 @@
-import type { ExtensionAPI, ToolDefinition } from "@mariozechner/pi-coding-agent";
-import { Type } from "@sinclair/typebox";
-import { StringEnum } from "@mariozechner/pi-ai";
+import type { ExtensionAPI, ToolDefinition } from "@earendil-works/pi-coding-agent";
+import { Type } from "typebox";
+import { StringEnum } from "@earendil-works/pi-ai";
 import * as path from "node:path";
 import * as fs from "node:fs/promises";
 import { existsSync } from "node:fs";
@@ -16,7 +16,12 @@ export const gitRepoTool = (pi: ExtensionAPI): ToolDefinition => ({
     target_dir: Type.Optional(Type.String({ description: "Target directory (relative to base_dir). Defaults to repo name." })),
     shallow: Type.Optional(Type.Boolean({ description: "Whether to perform a shallow clone. Default: true.", default: true })),
     branch: Type.Optional(Type.String({ description: "Specific branch or tag to clone/checkout." })),
-    protocol: Type.Optional(StringEnum(["https", "ssh"] as const), { description: "Preferred protocol if URL needs normalization (GitHub only)." }),
+    protocol: Type.Optional(
+      StringEnum(["https", "ssh"] as const, {
+        description: "Preferred protocol if URL needs normalization (GitHub only).",
+        default: "https",
+      }),
+    ),
   }),
   async execute(toolCallId, params, signal, onUpdate, ctx) {
     let { url, base_dir, target_dir, shallow = true, branch, protocol = "https" } = params;
